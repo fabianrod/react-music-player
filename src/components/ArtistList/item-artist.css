@@ -1,0 +1,35 @@
+
+.item-artist-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-artist {
+  flex-basis: 20%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+}
+
+.item-artist__cover {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0.5
+}
+
+.item-artist__cover:hover {
+  opacity: 1;
+}
+
+.item-artist__name {
+  position: absolute;
+  font-weight: 100;
+  font-size: 14px;
+}

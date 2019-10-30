@@ -1,30 +1,32 @@
-import React, { useState, useEffect }from 'react';
+import React, { useEffect }from 'react';
+import { connect } from 'react-redux';
 import Container from 'react-bootstrap/Container'
-import ItemArtist from '../../components/ItemArtist';
-import './artists.css'
-import axios from 'axios';
+import ArtistList from '../../components/ArtistList';
+import { fetchArtistsRequest } from '../../redux/actions/artists';
 
-function Artists() {
-  const [data, setData] = useState(null);
+import './artists.css';
 
-  const getData = () => {
-    axios.get('http://rubytify-ayenda.herokuapp.com/api/v1/artists')
-    .then(data => {
-      setData(data.data.data)
-    })
-  }
+function Artists({ artists: { data }, getArtists }) {
 
   useEffect(() => {
-    getData()
-  }, []);
+    getArtists();
+  }, [getArtists]);
   
   return(
     <div className='artists-page'>
       <Container className='artists'>
-          <ItemArtist data={data} />
+        <ArtistList data={data} />
       </Container>
     </div>
   )
 }
 
-export default Artists;
+const mapStateToProps = state => ({
+  artists: state.artists
+})
+
+const mapDispatchToProps = dispatch => ({
+  getArtists: () => dispatch(fetchArtistsRequest())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Artists);
