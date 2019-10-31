@@ -1,7 +1,8 @@
 import axios from 'axios';
+import api from '../constants';
 
 const getAllArtists = () => axios({
-  url: 'http://rubytify-ayenda.herokuapp.com/api/v1/artists',
+  url: api.artists,
   method: 'GET',
 })
   .then(({ data }) => data.data);
