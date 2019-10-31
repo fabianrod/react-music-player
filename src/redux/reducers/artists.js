@@ -1,4 +1,4 @@
-import { Types } from '../actions/artists';
+import Types from '../types/artists';
 
 const initialState = {
   data: [],

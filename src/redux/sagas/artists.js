@@ -1,5 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { Types, fetchArtistsSucceed, fetchArtistsFailure } from '../actions/artists';
+import { fetchArtistsSucceed, fetchArtistsFailure } from '../actions/artists';
+import Types from '../types/artists';
 import getAllArtists from '../../api/artists.api';
 
 function* handleFetchArtists() {

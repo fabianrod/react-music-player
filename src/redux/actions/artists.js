@@ -1,8 +1,4 @@
-export const Types = {
-  FETCH_ARTISTS_REQUEST: 'FETCH_ARTISTS_REQUEST',
-  FETCH_ARTISTS_SUCCEED: 'FETCH_ARTISTS_SUCCEED',
-  FETCH_ARTISTS_FAILURE: 'FETCH_ARTISTS_FAILURE',
-};
+import Types from '../types/artists';
 
 const fetchArtistsRequest = () => ({
   type: Types.FETCH_ARTISTS_REQUEST,
