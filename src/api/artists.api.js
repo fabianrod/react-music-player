@@ -5,7 +5,7 @@ const getAllArtists = () => {
     url: 'http://rubytify-ayenda.herokuapp.com/api/v1/artists',
     method: 'GET',
   })
-  .then(data => data.data.data);
+  .then(({data}) => data.data);
 }
 
 export { getAllArtists };
