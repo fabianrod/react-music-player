@@ -4,10 +4,11 @@ import Container from 'react-bootstrap/Container';
 import ArtistList from '../ArtistList';
 import './artists.scss';
 
-function Artists({ artists: { data }, getArtists }) {
+function Artists({ artists: { data = [] }, getArtists }) {
   useEffect(() => {
     getArtists();
-  }, [getArtists]);
+    // eslint-disable-next-line
+  }, []);
   return (
     <div className='artists-page'>
       <Container className='artists'>
@@ -19,8 +20,16 @@ function Artists({ artists: { data }, getArtists }) {
 
 Artists.propTypes = {
   artists: PropTypes.shape({
-    data: PropTypes.object.isRequired,
+    data: PropTypes.array.isRequired,
   }),
+  getArtists: PropTypes.func,
+};
+
+Artists.defaultProps = {
+  artists: PropTypes.shape({
+    data: [],
+  }),
+  getArtists: () => {},
 };
 
 export default Artists;
