@@ -1,5 +1,6 @@
-import React, { useEffect }from 'react';
-import Container from 'react-bootstrap/Container'
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import Container from 'react-bootstrap/Container';
 import ArtistList from '../ArtistList';
 import './artists.css';
 
@@ -7,14 +8,19 @@ function Artists({ artists: { data }, getArtists }) {
   useEffect(() => {
     getArtists();
   }, [getArtists]);
-  
-  return(
+  return (
     <div className='artists-page'>
       <Container className='artists'>
         <ArtistList data={data} />
       </Container>
     </div>
-  )
+  );
 }
+
+Artists.propTypes = {
+  artists: PropTypes.shape({
+    data: PropTypes.object.isRequired,
+  }),
+};
 
 export default Artists;

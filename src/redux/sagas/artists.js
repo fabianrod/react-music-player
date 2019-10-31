@@ -1,13 +1,12 @@
-import { call, put, takeLatest } from 'redux-saga/effects'
-import { fetchArtistsSucceed, fetchArtistsFailure } from '../actions/artists';
-import { getAllArtists } from '../../api/artists.api';
-import { Types } from '../actions/artists';
+import { call, put, takeLatest } from 'redux-saga/effects';
+import { Types, fetchArtistsSucceed, fetchArtistsFailure } from '../actions/artists';
+import getAllArtists from '../../api/artists.api';
 
 function* handleFetchArtists() {
   try {
     const artists = yield call(getAllArtists);
     yield put(fetchArtistsSucceed(artists));
-  } catch(e) {
+  } catch (e) {
     yield put(fetchArtistsFailure(e));
   }
 }

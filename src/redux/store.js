@@ -6,6 +6,6 @@ import ArtistsSaga from './sagas/artists';
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducers, applyMiddleware(sagaMiddleware));
 
-sagaMiddleware.run(ArtistsSaga)
+sagaMiddleware.run(ArtistsSaga);
 
-export { store }
+export default store;

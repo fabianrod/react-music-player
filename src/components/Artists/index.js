@@ -1,2 +1,3 @@
-import Artists from './artists'
-export default Artists
+import Artists from './artists';
+
+export default Artists;
