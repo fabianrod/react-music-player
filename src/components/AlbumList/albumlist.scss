@@ -1,0 +1,36 @@
+.item-album-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-album {
+  flex-basis: 20%;
+  margin-bottom: 20px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}
+
+.item-album__cover {
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0.5
+}
+
+.item-album__cover:hover {
+  opacity: 1;
+}
+
+.item-album__name {
+  display: block;
+  margin: 0 auto;
+  font-weight: 100;
+  font-size: 11px;
+  margin-top: 10px;
+  width: 70%;
+}

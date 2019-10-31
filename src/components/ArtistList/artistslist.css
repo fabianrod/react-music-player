@@ -1,12 +1,10 @@
 .item-artist-container {
   display: flex;
   flex-wrap: wrap;
-  align-content: center;;
-}
+  align-content: center; }
 
 .item-artist {
-  flex-basis: 20%;
-}
+  flex-basis: 20%; }
 
 .item-artist-link {
   margin-bottom: 20px;
@@ -14,13 +12,10 @@
   justify-content: center;
   align-items: center;
   color: #fff;
-  cursor: pointer;
-
-}
+  cursor: pointer; }
 
 .item-artist-link:hover {
-  color: #fff;
-}
+  color: #fff; }
 
 .item-artist__cover {
   border-radius: 50%;
@@ -28,15 +23,12 @@
   height: 200px;
   object-fit: cover;
   transition: opacity 0.3s ease-in-out;
-  opacity: 0.5
-}
+  opacity: 0.5; }
 
 .item-artist__cover:hover {
-  opacity: 1;
-}
+  opacity: 1; }
 
 .item-artist__name {
   position: absolute;
   font-weight: 100;
-  font-size: 14px;
-}
+  font-size: 14px; }

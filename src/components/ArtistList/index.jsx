@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './artistslist.scss';
 
 function ArtistList({ data }) {
@@ -7,10 +8,12 @@ function ArtistList({ data }) {
     <div className='item-artist-container'>
       {
         // eslint-disable-next-line
-        Array.isArray(data) && data.map(({ name, id, image }) => (
-          <div className='item-artist' key={id}>
-            <img src={image} className='item-artist__cover' alt={name} />
-            <span className='item-artist__name'>{name}</span>
+        data && data.map(({ name, id, image }) => (
+          <div className='item-artist'>
+            <Link to={`/albums/${id}`} key={id} className='item-artist-link'>
+              <img src={image} className='item-artist__cover' alt={name} />
+              <span className='item-artist__name'>{name}</span>
+            </Link>
           </div>
         ))
       }

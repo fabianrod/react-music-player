@@ -2,7 +2,10 @@ const baseUrl = 'http://rubytify-ayenda.herokuapp.com/api/v1/';
 const api = {
   artists: `${baseUrl}artists`,
   genres: `${baseUrl}genres`,
-  albums: `${baseUrl}artists/:id/albums`,
+  albums: {
+    url: `${baseUrl}artists/`,
+    extend: '/albums',
+  },
   songs: `${baseUrl}albums/:id/songs`,
   randomSong: `${baseUrl}genres/:genre_name/random_song`,
 };
