@@ -1,5 +1,5 @@
 import React from 'react';
-import './item-artist.css';
+import './artistslist.scss';
 
 function ArtistList(props) {
   const artists = props.data;

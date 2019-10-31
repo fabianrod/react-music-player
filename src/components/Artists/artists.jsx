@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Container from 'react-bootstrap/Container';
 import ArtistList from '../ArtistList';
-import './artists.css';
+import './artists.scss';
 
 function Artists({ artists: { data }, getArtists }) {
   useEffect(() => {
