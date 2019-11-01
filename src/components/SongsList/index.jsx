@@ -9,9 +9,14 @@ function SongsList({ data }) {
       {
         data && data.map(({ name, id, preview_url }) => (
           <div className='item-song' key={id}>
-            <a href={`${preview_url}`} className='item-song-link'>
+            {
+              preview_url !== null ? (
+              <a href={`${preview_url}`} className='item-song-link'>
               <span className='item-song__name'>{name}</span>
-            </a>
+              </a>
+            ) : (
+              <small className='item-song-warning'>No hay vista previa de la canción</small>
+            )}
           </div>
         ))
       }
