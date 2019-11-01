@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from '../../containers/Home';
+import Home from '../../components/Home';
 import Artists from '../../containers/Artists';
 import Albums from '../../containers/Albums';
 import Songs from '../../containers/Songs';

@@ -1,0 +1,31 @@
+.home-page {
+  background-color: #141414;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.btn-random-song {
+  background-color: #1db954;
+  border: 0px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.main-link {
+  margin-bottom: 10px;
+}
+
+.main-link span {
+  margin-left: 10px;
+}
+
+.link-artists, .link-artists:hover {
+  color: #fff;
+  text-decoration: underline;
+}
