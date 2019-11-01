@@ -1,0 +1,11 @@
+.item-song {
+  height: 100px; }
+
+.item-song a {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 100;
+  display: block;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #293E35; }

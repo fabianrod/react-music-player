@@ -6,7 +6,10 @@ const api = {
     url: `${baseUrl}artists/`,
     extend: '/albums',
   },
-  songs: `${baseUrl}albums/:id/songs`,
+  songs: {
+    url: `${baseUrl}albums/`,
+    extend: '/songs',
+  },
   randomSong: `${baseUrl}genres/:genre_name/random_song`,
 };
 
