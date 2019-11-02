@@ -13,7 +13,6 @@
     "react-scripts": "3.2.0",
     "redux": "^4.0.4",
     "redux-saga": "^1.1.1",
-    "redux-thunk": "^2.3.0",
     "sinon": "^7.5.0"
   },
   "scripts": {
@@ -23,7 +22,7 @@
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom --watchAll",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .jsx,.js src"
   },
