@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Container from 'react-bootstrap/Container';
 import SongsList from '../SongsList';
+import Loading from '../Loading';
 import './songs.scss';
 
 function Songs({ songs: { data = [] }, getSongs, match: { params } }) {
@@ -12,7 +13,9 @@ function Songs({ songs: { data = [] }, getSongs, match: { params } }) {
   return (
     <div className='songs-page'>
       <Container className='songs'>
-        <SongsList data={data} />
+        {
+          data.length !== 0 ? (<SongsList data={data} />) : (<Loading />)
+        }
       </Container>
     </div>
   );

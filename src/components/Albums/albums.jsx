@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import PropTypes from 'prop-types';
 import AlbumList from '../AlbumList';
+import Loading from '../Loading';
 import './albums.scss';
 
 function Albums({ albums: { data }, getAlbums, match: { params } }) {
@@ -13,7 +14,9 @@ function Albums({ albums: { data }, getAlbums, match: { params } }) {
   return (
     <div className='albums-page'>
       <Container className='albums'>
-        <AlbumList data={data} />
+        {
+          data.length !== 0 ? (<AlbumList data={data} />) : (<Loading />)
+        }
       </Container>
     </div>
   );
