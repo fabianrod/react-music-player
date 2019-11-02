@@ -23,7 +23,7 @@ function Artists({ artists: { data = [] }, getArtists }) {
 
 Artists.propTypes = {
   artists: PropTypes.shape({
-    data: PropTypes.array.isRequired,
+    data: PropTypes.array,
   }),
   getArtists: PropTypes.func,
 };
