@@ -1,7 +1,6 @@
 .item-artist-container {
   display: flex;
   flex-wrap: wrap;
-  align-content: center;;
 }
 
 .item-artist {
@@ -15,7 +14,6 @@
   align-items: center;
   color: #fff;
   cursor: pointer;
-
 }
 
 .item-artist-link:hover {
@@ -39,4 +37,39 @@
   position: absolute;
   font-weight: 100;
   font-size: 14px;
+}
+
+@media screen and(max-width: 860px) {
+  .item-artist-container {
+    justify-content: center;
+  }
+
+  .item-artist {
+    flex-basis: 30%;
+  }
+}
+
+@media screen and(max-width: 660px) {
+  .item-artist {
+    flex-basis: 32%;
+  }
+
+  .item-artist__cover {
+    width: 110px;
+    height: 110px;
+  }
+
+}
+
+@media screen and(max-width: 420px) {
+  .item-artist {
+    flex-basis: 48%;
+  }
+
+  .item-artist__name {
+    display: block;
+    max-width: 105px;
+    font-size: 13px;
+    text-align: center;
+  }
 }
