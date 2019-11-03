@@ -26,6 +26,12 @@ function Home() {
     fetchRandomSong();
     // eslint-disable-next-line
   }, [genres])
+  useEffect(() => {
+    if(randomSong.preview_url === null) {
+      fetchRandomSong();
+    }
+    // eslint-disable-next-line
+  },[randomSong])
 
   return (
     <div className='home-page'>
