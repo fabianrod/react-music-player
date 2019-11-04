@@ -20,15 +20,11 @@ function Home() {
   };
 
   useEffect(() => {
-    fetchGenres();
-  }, []);
+    fetchGenres()
+  },[]);
   useEffect(() => {
-    fetchRandomSong();
-    // eslint-disable-next-line
-  }, [genres])
-  useEffect(() => {
-    if(randomSong.preview_url === null) {
-      fetchRandomSong();
+    if(randomSong.preview_url === null || randomSong.preview_url === undefined) {
+      fetchRandomSong(); 
     }
     // eslint-disable-next-line
   },[randomSong])
